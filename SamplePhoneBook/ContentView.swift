@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView {
+            Text("プロフィール一覧")
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("プロフィール一覧")
+                }
+            
+            Text("プロフィール登録")
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("プロフィール登録")
+                }
+        }
     }
 }
 
