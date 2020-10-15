@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            Text("プロフィール一覧")
+            ProfileCell()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("プロフィール一覧")
