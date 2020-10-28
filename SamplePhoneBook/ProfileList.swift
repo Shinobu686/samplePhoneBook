@@ -20,14 +20,15 @@ struct ProfileList: View {
     var body: some View {
         
         NavigationView {
-            VStack{
-                ForEach(0...4, id: \.self){ _ in
-                    NavigationLink(destination: ProfileRegistration()) {
-                        ProfileCell()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack{
+                    ForEach(0...4, id: \.self){ _ in
+                        NavigationLink(destination: ProfileRegistration()) {
+                            ProfileCell()
+                        }.navigationBarTitle("プロフィール一覧", displayMode: .inline)
                     }
                 }
-            }.navigationBarTitle("プロフィール一覧", displayMode: .inline)
-            
+            }
         }
     }
 }
