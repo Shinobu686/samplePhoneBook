@@ -12,13 +12,13 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            Text("プロフィール一覧")
+            ProfileList()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("プロフィール一覧")
                 }
             
-            Text("プロフィール登録")
+            ProfileRegistration()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("プロフィール登録")

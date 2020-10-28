@@ -38,7 +38,7 @@ struct ProfileCell: View {
         .padding()
         .frame(width: 300, height: 150)
         .border(Color.black, width: 2)
-            .cornerRadius(5.0)
+        .cornerRadius(5.0)
     }
 }
 
