@@ -62,15 +62,12 @@ struct ProfileRegistration: View {
                     Button(action: {}) {
                         Text("登録する")
                             .frame(width: 350, height: 50)
-                            .foregroundColor(.black)
-                            .background(Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
-                    }.navigationBarTitle("プロフィール登録", displayMode: .inline)
-                }
-                
+                            .foregroundColor(name.isEmpty || phoneNum.isEmpty ? Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) : Color.black)
+                            .background(name.isEmpty || phoneNum.isEmpty ?  Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
+                    }.disabled(name.isEmpty || phoneNum.isEmpty)
+                }.navigationBarTitle("プロフィール登録", displayMode: .inline)
             }
         }
-        
-        
     }
 }
 struct ProfileRegistration_Previews: PreviewProvider {
