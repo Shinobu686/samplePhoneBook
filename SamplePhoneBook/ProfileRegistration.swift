@@ -31,20 +31,20 @@ struct ProfileRegistration: View {
                 VStack(alignment: .center) {
                     Image(systemName: "person.crop.circle")
                         .resizable()
-                        .frame(width: 200, height: 200)
+                        .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.width / 2)
                     
                     TextField("氏名を入力", text: $name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: 350,height: 50)
+                        .frame(width: UIScreen.main.bounds.width - 30,height: 50)
                     
                     TextField("電話番号を入力", text: $phoneNum)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: 350, height: 50)
+                        .frame(width: UIScreen.main.bounds.width - 30,height: 50)
                     
-                    HStack(spacing: 5) {
+                    HStack {
                         TextField("郵便番号を入力", text: $addressNum)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 285, height: 40)
+                            .frame(width: UIScreen.main.bounds.width - 100,height: 50)
                         
                         Button(action: {}) {
                             Text("検索")
@@ -52,25 +52,22 @@ struct ProfileRegistration: View {
                                 .padding(10)
                                 .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
                                 .cornerRadius(50)
-                                .frame(width: 60, height: 30)
+                                .frame(width: UIScreen.main.bounds.width - 350, height: 30)
                         }
                     }
                     TextField("住所を入力", text: $address)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: 350, height: 50)
+                        .frame(width: UIScreen.main.bounds.width - 30,height: 50)
                     
                     Button(action: {}) {
                         Text("登録する")
                             .frame(width: 350, height: 50)
-                            .foregroundColor(.black)
-                            .background(Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
-                    }.navigationBarTitle("プロフィール登録", displayMode: .inline)
-                }
-                
+                            .foregroundColor(name.isEmpty || phoneNum.isEmpty ? Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) : Color.black)
+                            .background(name.isEmpty || phoneNum.isEmpty ?  Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
+                    }.disabled(name.isEmpty || phoneNum.isEmpty)
+                }.navigationBarTitle("プロフィール登録", displayMode: .inline)
             }
         }
-        
-        
     }
 }
 struct ProfileRegistration_Previews: PreviewProvider {
