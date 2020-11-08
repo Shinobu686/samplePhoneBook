@@ -20,6 +20,7 @@ struct ProfileRegistration: View {
     @State var addressNum = ""
     @State var address = ""
     
+    @ObservedObject var profileRegisterVM = ProfileRegisterViewModel()
     
     var body: some View {
         
@@ -46,7 +47,9 @@ struct ProfileRegistration: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .frame(width: UIScreen.main.bounds.width - 100,height: 50)
                         
-                        Button(action: {}) {
+                        Button(action: {
+                            profileRegisterVM.get(param: addressNum)
+                        }) {
                             Text("検索")
                                 .foregroundColor(Color.white)
                                 .padding(10)

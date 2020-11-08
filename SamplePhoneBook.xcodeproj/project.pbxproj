@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D475284E255570860078190C /* ProfileRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D475284D255570860078190C /* ProfileRegisterViewModel.swift */; };
+		D4752851255571DB0078190C /* AddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4752850255571DB0078190C /* AddressResponse.swift */; };
 		D4977BB42548061200EA6ED3 /* ProfileRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4977BB32548061200EA6ED3 /* ProfileRegistration.swift */; };
 		D4B916C425385E8E00FBCE2E /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B916C325385E8E00FBCE2E /* ProfileCell.swift */; };
 		D4B916D5254065F200FBCE2E /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B916D4254065F200FBCE2E /* ProfileList.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D475284D255570860078190C /* ProfileRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRegisterViewModel.swift; sourceTree = "<group>"; };
+		D4752850255571DB0078190C /* AddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResponse.swift; sourceTree = "<group>"; };
 		D4977BB32548061200EA6ED3 /* ProfileRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRegistration.swift; sourceTree = "<group>"; };
 		D4B916C325385E8E00FBCE2E /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		D4B916D4254065F200FBCE2E /* ProfileList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				D4B916C325385E8E00FBCE2E /* ProfileCell.swift */,
 				D4B916D4254065F200FBCE2E /* ProfileList.swift */,
 				D4977BB32548061200EA6ED3 /* ProfileRegistration.swift */,
+				D475284D255570860078190C /* ProfileRegisterViewModel.swift */,
+				D4752850255571DB0078190C /* AddressResponse.swift */,
 				D4F99FA52534777600AA2051 /* Assets.xcassets */,
 				D4F99FAA2534777600AA2051 /* LaunchScreen.storyboard */,
 				D4F99FAD2534777600AA2051 /* Info.plist */,
@@ -158,6 +164,8 @@
 				D4F99FA02534777300AA2051 /* AppDelegate.swift in Sources */,
 				D4B916C425385E8E00FBCE2E /* ProfileCell.swift in Sources */,
 				D4F99FA22534777300AA2051 /* SceneDelegate.swift in Sources */,
+				D475284E255570860078190C /* ProfileRegisterViewModel.swift in Sources */,
+				D4752851255571DB0078190C /* AddressResponse.swift in Sources */,
 				D4B916D5254065F200FBCE2E /* ProfileList.swift in Sources */,
 				D4F99FA42534777300AA2051 /* ContentView.swift in Sources */,
 			);
