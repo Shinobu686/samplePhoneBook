@@ -19,8 +19,7 @@ class ProfileRegisterViewModel: ObservableObject {
         let task = URLSession.shared.dataTask(with: request) {(data,response,error) in
             guard let data = data else {return}
             do {
-                self.address = try
-                    JSONDecoder().decode(AddressResponse.self, from: data)
+                self.address = try JSONDecoder().decode(AddressResponse.self, from: data)
                 print(self.address)
             } catch let error {
                 print(error)
