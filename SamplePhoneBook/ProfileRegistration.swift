@@ -48,14 +48,17 @@ struct ProfileRegistration: View {
                             .frame(width: UIScreen.main.bounds.width - 100,height: 50)
                         
                         Button(action: {
-                            profileRegisterVM.get(param: addressNum)
-                        }) {
+                                profileRegisterVM.get(param: self.addressNum, updateUI: {
+                                    self.address = self.profileRegisterVM.addressString
+                                })}) {
                             Text("検索")
                                 .foregroundColor(Color.white)
                                 .padding(10)
                                 .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
                                 .cornerRadius(50)
                                 .frame(width: UIScreen.main.bounds.width - 350, height: 30)
+                        }.alert(isPresented: self.$profileRegisterVM.showAlert) {
+                            Alert(title: Text("エラー"), message: Text(" \(self.profileRegisterVM.alertMessage)"), dismissButton: .default(Text("OK")))
                         }
                     }
                     TextField("住所を入力", text: $address)
